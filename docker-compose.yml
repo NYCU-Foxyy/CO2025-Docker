@@ -1,0 +1,15 @@
+services:
+  co2025:
+    build:
+      dockerfile: Dockerfile
+    container_name: co2025
+    devices:
+      - /dev/fuse
+    volumes:
+      - ./workspace:/home/user/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: 1
+    privileged: true
+    network_mode: "host"
