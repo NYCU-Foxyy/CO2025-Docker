@@ -73,9 +73,7 @@ RUN wget 'https://github.com/mortbopet/Ripes/releases/download/v2.2.6/Ripes-v2.2
  && chmod a+x Ripes.AppImage
 
 USER root
-RUN apt-get install -y libfuse2 fuse libgl1 libglx-mesa0 libmpc3
-RUN apt-get install -y make device-tree-compiler
-RUN apt-get install -y default-jre
+RUN apt-get install -y libfuse2 fuse libgl1 libglx-mesa0 libmpc3 make device-tree-compiler default-jre g++ gcc
 
 RUN wget 'https://github.com/TheThirdOne/rars/releases/download/v1.6/rars1_6.jar' -O rars1_6.jar \
  && chmod a+x rars1_6.jar
