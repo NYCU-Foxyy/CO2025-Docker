@@ -79,4 +79,4 @@ RUN wget 'https://github.com/TheThirdOne/rars/releases/download/v1.6/rars1_6.jar
  && chmod a+x rars1_6.jar
 
 USER user
-CMD ["bash"]
+CMD ["/bin/bash", "-l"]
